@@ -13,14 +13,14 @@ let num		= [0,1,2,3,4,5,6,7,8,9]
 
 // let item = ""
 let editando = false
-let agregarItem = function(item) {
+let agregarItem = function() {
 	let input = document.querySelectorAll('#itemIng')
 	input = input [0] //
-	let itemId = ""
+	let itemId = ''
 	let li = ` 			
 			<li>
 				<span>${input.value}</span>
-				<span style= "display: none" id= "itemId"> ${itemId.value}</span>
+				<span style= "display: inline" id= "itemId"> aca deberia ir itemId: ${itemId}</span>
 				<button type="button" onclick="editarItem('${input.value}')">Editar</button> 
 				<button type="button" onclick="eliminarItem('${input.value}')">Eliminar</button>
 			</li>
@@ -28,7 +28,6 @@ let agregarItem = function(item) {
 	if (!editando) {
 		itemIng.value= ""
 		//Generando un itemId unico para el item ingresado
-		let itemId = ''
 		let itemIdV = 4
 		for (let i = 1; i < itemIdV +1; i++){
 			for (let i = 1; i < 5; i++) {
@@ -48,15 +47,7 @@ let agregarItem = function(item) {
 		else {
 			let listaIngresada = document.querySelectorAll ('li')
 			let itemLista = listaIngresada[itemId]
-			//console.log("item a modificar segun id::", itemLista.itemId)
-			// // let editarInd= indModif
-			// for (let i = listaIngresada.length - 1; i >= 0; i--) {
-			// 	let itemLista = listaIngresada[i]
-			// 	console.log ("itemLista::", itemLista);
-			// 	if (itemLista.firstElementChild.innerText == input.value){
-			// 		itemLista.firstElementChild.innerText = input.value
-				// }
-			// console.log ("mostrando:: ", itemLista.firstElementChild.innerText) 
+			console.log ("DEBERIA ESTAR EDITANDO EN ESTE PUTO MOMENTO!!!!")
 			editando = false
 			
 		}
