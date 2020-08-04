@@ -53,11 +53,6 @@ let agregarItem = function() {
 		}
 }
 
-
-
-
-
-
 let eliminarItem = function(item) {
 	let listaIngresada = document.querySelectorAll ('li')
 	for (let i = listaIngresada.length - 1; i >= 0; i--) {
@@ -76,15 +71,8 @@ let editarItem = function(item) {
 		if(itemLista.firstElementChild.innerText == item){
 		 itemIng.value= item
 		 editando = true
-		 let posicion = i
-		//  console.log ("posicion a editar :: ", posicion)
-		 return posicion
-		 console.log ("editar item:: ", editarItem)
 		}
 	}
-let itemAeditar = editarItem
-console.log ("editar item:: ", itemAeditar)
-
 }
 
         
